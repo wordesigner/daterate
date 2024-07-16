@@ -28,7 +28,7 @@ class User_form(forms.Form):
         'max_value': 'نه دیگه، یه چیزی بگو که جور دربیاد'
     })
     # >>> Pay attention to the following field. If we want to have radio buttons, it is possible through forms.ChoiceField
-    sex = forms.ChoiceField(label='وضعیت سکس‌تون', choices=sex_status, widget=forms.CheckboxSelectMultiple, error_messages={
+    sex = forms.ChoiceField(label='وضعیت سکس‌تون', choices=sex_status, widget=forms.RadioSelect, error_messages={
         'required': 'یکی رو باید انتخاب کنی'
     })
     pet = forms.ChoiceField(label='پت‌تون', choices=pet_status, widget=forms.RadioSelect, error_messages={
