@@ -14,7 +14,7 @@
 {% block main %}
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 col-md-4 bg-info"></div>
+            <div class="col-sm-4 col-md-4"></div>
             <div class="col-sm-4 col-md-4">
                 <form class="form-main" method="POST" novalidate>  <!--novalidate attribute is necessary to kill off browser side validation to see Django custom errors-->
                     {% csrf_token %}
@@ -29,7 +29,7 @@
                     <button type="submit">نتیجه رو نشون بده!</button>
                 </form>
             </div>
-            <div class="col-sm-4 col-md-4 bg-success"></div>
+            <div class="col-sm-4 col-md-4"></div>
         </div>
     </div>
 {% endblock  %}
