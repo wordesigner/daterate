@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap_icons %}
+
+{% block app_css %}
+    <link rel="stylesheet" href="{% static 'beta/result.css' %}">
+{% endblock  %}
+
+{% block title %}
+    💯درصد موفقیت در دیت
+{% endblock  %}
+
+{% block main %}
+<div class="container">
+    {% for user in mymodel %}
+    <div class="row">
+        <div class="col-sm-4 col-md-4 bg-info"></div>
+        <div class="col-sm-4 col-md-4 d-flex align-items-center justify-content-center">
+            {# {% bs_icon 'circle-fill' color='blueviolet' size='3em' extra_classes='main-circle' %} #}
+            <!--<div class="circle">
+                <p class="text-circle text-light" id="persian">سرعت</p>
+            </div>-->
+            {% if user.net < 20000000 and user.ex <= 5 %}
+                <div class="ribbon">۵۷<sub>%</sub></div>
+            {% elif user.net > 20000000 and user.ex > 5  and user.sex == '3' %}
+                <div class="ribbon">۶۴<sub>%</sub></div>
+            {% elif user.net > 20000000 and user.ex <= 5 and user.sex == '1' or user.sex == '2' %}
+                <div class="ribbon">۴۴<sub>%</sub></div>                  
+            {% else %}
+                <div class="ribbon">۵۰<sub>%</sub></div>            
+            {% endif %}
+        </div>
+        <div class="col-sm-4 col-md-4">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-md-4"></div>
+        <div class="col-sm-4 col-md-4 d-flex align-items-center justify-content-center">
+                <div class="recom">
+                    سلام
+                    {{ user.name }}،
+                    {% if user.net < 20000000 %}
+                        درسته پول خوشبختی نمیاره، ولی برای اینکه شانس‌تو ببری بالاتر، یه کمی بیشتر پول جمع کن!
+                    {% endif %}
+                    {% if user.ex > 10 and user.net > 20000000 %}
+                        شما این اواخر خیلی دیت رفتی، یه کمی بین دیت‌هات فاصله بنداز، خودش پیدا میشه.
+                    {% endif %}
+                    {% if user.sex == '1' and user.ex < 10 and user.net > 20000000 %}
+                        از همون اول دنبال سکس باشی، شانسی برای دیت موفق نداری... بذار زمان درستش اتفاق بیفته.
+                        {% elif user.sex == '2' and user.ex < 10 and user.net > 20000000 %}
+                        اینقدر توی پورن هاب دور دور نکن، کتاب بخون، با آدم‌های درست معاشرت کن و زیاد بهش فکر نکن تا خودش بیاد.
+                        {% elif user.sex == '3' and user.ex < 10 and user.net > 20000000 %}
+                        اینجوری که خوب نیست، بالاخره باید یه حسی باشه، سعی کن وقت‌هایی که خسته‌ای دیت نری و همراه با غذات پیاز بخور.
+                    {% endif %}
+                    {% if user.pet == 'c' and user.ex < 10 and user.net > 20000000 %}
+                        عه گربه داری آفرین می‌تونه شانس‌تو افزایش بده، ولی سلیقه‌ها فرق می‌کنه و هر کسی یه مدل گربه‌ای دوست داره.
+                        {% elif user.pet == 'd' and user.ex < 10 and user.net > 20000000 %}
+                        عه سگ داری آفرین می‌تونه شانس‌تو افزایش بده، ولی سلیقه‌ها فرق می‌کنه و هر کسی یه مدل سگی دوست داره.
+                        {% elif user.pet == 'no' and user.ex < 10 and user.net > 20000000 %}
+                        سعی کن یه چیزی داشته باشی، جوجه‌تیغی، ایگوانا، لاک‌پشت، مرغ هلندی و خلاصه بدون پت ممکنه شانس کمتری داشته باشی.
+                    {% endif %}
+                </div>
+            
+        </div>
+        <div class="col-sm-4 col-md-4"></div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap_icons %}
+
+{% block app_css %}
+    <link rel="stylesheet" href="{% static 'beta/beta.css' %}">
+{% endblock  %}
+
+{% block title %}
+    :: دیت‌ریت ::
+{% endblock  %}
+    
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 bg-info"></div>
+            <div class="col-sm-4 col-md-4">
+                <form class="form-main" method="POST" novalidate>  <!--novalidate attribute is necessary to kill off browser side validation to see Django custom errors-->
+                    {% csrf_token %}
+                    {% for field in myform %}
+                        <div class="{% if field.errors %}errors{% endif %}">  <!--errors is a class will be used in css file to apply desired styles if the condition is valid-->
+                            <div class="form-label">{{ field.label_tag }}</div>
+                            <div class="field-input">{{ field }}</div>
+                            <div>{{ field.errors }}</div>
+                        </div>
+                    {% endfor %}
+                    
+                    <button type="submit">نتیجه رو نشون بده!</button>
+                </form>
+            </div>
+            <div class="col-sm-4 col-md-4 bg-success"></div>
+        </div>
+    </div>
+{% endblock  %}

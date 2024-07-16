@@ -1,0 +1,120 @@
+/*errorlist is the internal, default Django class for list of errors*/
+.errorlist {
+    /* margin-top: 0.5rem; */
+    /* margin-bottom: 0.5rem; */
+    list-style: none;
+    margin: 0.5rem 0;
+    padding: 0;
+    font-size: small;
+    color: #860101;
+}
+
+.errors input{ /*errors input means the input inside the tag with the class name errors*/
+    border-color: #860101;
+    background-color: #fd9d9d;
+}
+
+.errors label {
+    color: #860101;
+}
+
+.form-main {
+        /* margin: 0px; */
+        padding: 0.5rem 1rem;
+        margin-top: -10px;
+        margin-right: 20px;
+}
+
+.form-main input{
+    /*display: block;*/
+    border-color: black;
+    border-radius: 5px;
+}
+
+.form-main input:focus {
+    border-color: blueviolet;
+    outline: none;
+    background-color: rgb(241, 249, 247);
+}
+
+.sexint input {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin-left: 5px;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    display: inline-grid;
+    place-content: center;
+  }
+  
+  .sexint input::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em currentColor;
+  }
+  
+  .sexint input:checked::before {
+    transform: scale(1);
+  }
+  
+  .form-label {
+    margin-bottom: .5rem;
+    margin-top: 1.5rem;
+    font-size: 15px;
+  }
+  
+
+.form-label {
+    margin-bottom: .5rem;
+    margin-top: 1.5rem;
+    font-size: 15px;
+    /*float: right;*/
+}
+
+button{
+    background-color: blueviolet;
+    border: solid 1px blueviolet;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    color: white;
+    padding: 0.25rem 0.5rem;
+}
+
+button:hover, button:active{
+    box-shadow: 2px 3px #E91E63;
+    border-color: #E91E63;
+}
+
+
+label[for='id_sex_0'] {
+    font-size: 14px;
+}
+
+label[for='id_sex_1'] {
+    font-size: 14px;
+}
+
+label[for='id_sex_2'] {
+    font-size: 14px;
+}
+
+label[for='id_pet_0'] {
+    font-size: 14px;
+}
+
+label[for='id_pet_1'] {
+    font-size: 14px;
+}
+
+label[for='id_pet_2'] {
+    font-size: 14px;
+}

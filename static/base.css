@@ -1,0 +1,21 @@
+/*@import url('https://v1.fontapi.ir/css/Estedad');*/
+
+@font-face {
+    font-family: 'Estedad';
+    src: url('Estedad-FD-Regular.ttf') format('truetype'),url('Estedad-FD-Regular.woff2') format('woff2');
+  }
+ 
+
+* {
+    box-sizing: border-box;
+}
+
+#persian {
+    font-family: 'Estedad', sans-serif !important;
+}
+
+body {
+    direction: rtl;
+    font-family: 'Estedad', sans-serif !important;    
+}
+

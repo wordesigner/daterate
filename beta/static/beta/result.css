@@ -1,0 +1,97 @@
+/*
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+}
+
+.text-circle {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 11px;
+}
+*/
+
+/*
+@font-face {
+    font-family: 'Estedad';
+    src: url('Estedad-FD-Regular.ttf') format('truetype'),url('Estedad-FD-Regular.woff2') format('woff2');
+  } 
+*/
+
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+    font-size: 31px;
+    font-weight: bold;
+    color: #fff;
+    /*font-family: 'Estedad', sans-serif !important;*/
+  }
+  .ribbon {
+    --c: #ca453d;
+    padding: .6em 1.5em 1.6em;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    width: fit-content;
+    box-sizing: border-box;
+    margin-top: 110px;
+    font-family: 'Estedad', sans-serif !important;
+
+  }
+  .ribbon:before {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    inset: 30% 0 auto;
+    aspect-ratio: 1;
+    background: color-mix(in srgb, var(--c), #000 35%);
+    clip-path: polygon(calc(100%/3) 0,calc(200%/3) 0,100% 90%,80% 85%,calc(200%/3) 100%,calc(100%/3) 0,calc(200%/3) 0,calc(100%/3) 100%,20% 85%,0 90%);
+  }
+  .ribbon:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--c);
+    -webkit-mask:
+     radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+     radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+     linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+    clip-path: polygon(-41% 0,50% 91%, 141% 0);
+  }
+
+#persian {
+    font-family: 'Estedad', sans-serif !important;
+}
+
+.recom {
+    border-radius: 5px;
+    /* border: 2px solid blueviolet; */
+    /* box-shadow: 2px 2px black; */
+    margin-top: 136px;
+    /* background-color: blueviolet; */
+    font-size: 17px;
+    width: 185px;
+    height: auto;
+    text-align: center;
+}
+
+sub {
+    bottom: 19px;
+    left: 29px;
+}
+
+sub, sup {
+    position: relative;
+    font-size: 15px;
+    line-height: 0;
+    vertical-align: baseline;
+}
