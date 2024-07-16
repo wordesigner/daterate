@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,6 +87,7 @@ DATABASES = {
     }
 }
 
+DATABASES['default'] = dj_database_url.parse('postgresql://datebox_089l_user:IMD1o2dspFzjpq9yzED2A4ayP6mpq4kw@dpg-cqb3pb6ehbks73dia9jg-a.oregon-postgres.render.com/datebox_089l')
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -134,13 +136,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # ===========================================
 # code needed to deploy in Render.com:
 import os
-import dj_database_url
+
 
 if 'RENDER' in os.environ:
     print("USING RENDER.COM SETTINGS!")
     DEBUG = False
     ALLOWED_HOSTS = [os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
-    DATABASES = {'default': dj_database_url.config(conn_max_age=600)}
+    
     MIDDLEWARE.insert(MIDDLEWARE.index('django.middleware.security.SecurityMiddleware') + 1,
                       'whitenoise.middleware.WhiteNoiseMiddleware')
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
