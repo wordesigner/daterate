@@ -95,3 +95,17 @@ sub, sup {
     line-height: 0;
     vertical-align: baseline;
 }
+
+button{
+  background-color: blueviolet;
+  border: solid 1px blueviolet;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+  color: white;
+  padding: 0.25rem 0.5rem;
+}
+
+button:hover, button:active{
+  box-shadow: 2px 3px #E91E63;
+  border-color: #E91E63;
+}
