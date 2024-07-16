@@ -41,50 +41,36 @@
                     {{ user.name }}،
                     {% if user.net < 20000000 %}
                         درسته پول خوشبختی نمیاره، ولی برای اینکه شانس‌تو ببری بالاتر، یه کمی بیشتر پول جمع کن!
-                        <br>
-                            <a href="{% url 'datedata' %}" target="_self">
-                        <button>یه بار دیگه!</button>
-                    </a>
+                        
                     {% endif %}
                     {% if user.ex > 10 and user.net > 20000000 %}
                         شما این اواخر خیلی دیت رفتی، یه کمی بین دیت‌هات فاصله بنداز، خودش پیدا میشه.
-                        <br>
-                            <a href="{% url 'datedata' %}" target="_self">
-                        <button>یه بار دیگه!</button>
+                        
                     {% endif %}
                     {% if user.sex == '1' and user.ex < 10 and user.net > 20000000 %}
                         از همون اول دنبال سکس باشی، شانسی برای دیت موفق نداری... بذار زمان درستش اتفاق بیفته.
-                        <br>
-                            <a href="{% url 'datedata' %}" target="_self">
-                        <button>یه بار دیگه!</button>
+                        
                         {% elif user.sex == '2' and user.ex < 10 and user.net > 20000000 %}
                         اینقدر توی پورن هاب دور دور نکن، کتاب بخون، با آدم‌های درست معاشرت کن و زیاد بهش فکر نکن تا خودش بیاد.
-                        <br>
-                            <a href="{% url 'datedata' %}" target="_self">
-                        <button>یه بار دیگه!</button>
+                        
                         {% elif user.sex == '3' and user.ex < 10 and user.net > 20000000 %}
                         اینجوری که خوب نیست، بالاخره باید یه حسی باشه، سعی کن وقت‌هایی که خسته‌ای دیت نری و همراه با غذات پیاز بخور.
-                        <br>
-                            <a href="{% url 'datedata' %}" target="_self">
-                        <button>یه بار دیگه!</button>
+                        
                     {% endif %}
                     {% if user.pet == 'c' and user.ex < 10 and user.net > 20000000 %}
                         عه گربه داری آفرین می‌تونه شانس‌تو افزایش بده، ولی سلیقه‌ها فرق می‌کنه و هر کسی یه مدل گربه‌ای دوست داره.
-                        <br>
-                            <a href="{% url 'datedata' %}" target="_self">
-                        <button>یه بار دیگه!</button>
+                        
                         {% elif user.pet == 'd' and user.ex < 10 and user.net > 20000000 %}
                         عه سگ داری آفرین می‌تونه شانس‌تو افزایش بده، ولی سلیقه‌ها فرق می‌کنه و هر کسی یه مدل سگی دوست داره.
-                        <br>
-                            <a href="{% url 'datedata' %}" target="_self">
-                        <button>یه بار دیگه!</button>
+                        
                         {% elif user.pet == 'no' and user.ex < 10 and user.net > 20000000 %}
                         سعی کن یه چیزی داشته باشی، جوجه‌تیغی، ایگوانا، لاک‌پشت، مرغ هلندی و خلاصه بدون پت ممکنه شانس کمتری داشته باشی.
-                        <br>
-                            <a href="{% url 'datedata' %}" target="_self">
-                        <button>یه بار دیگه!</button>
+                        
                     {% endif %}
-                    
+                    <br>
+                        <a href="{% url 'datedata' %}" target="_self">
+                            <button>یه بار دیگه!</button>
+                        </a>
                 </div>
             
         </div>
