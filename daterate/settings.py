@@ -87,7 +87,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.parse('postgresql://datebox_089l_user:IMD1o2dspFzjpq9yzED2A4ayP6mpq4kw@dpg-cqb3pb6ehbks73dia9jg-a.oregon-postgres.render.com/datebox_089l')
+DATABASES['default'] = dj_database_url.parse('postgresql://daterate_user:o9HBaxVnDSsQZMPHKQuXMlwkzXtaHjLH@dpg-crdagfl2ng1s73fr8ocg-a.oregon-postgres.render.com/daterate')
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
